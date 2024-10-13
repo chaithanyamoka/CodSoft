@@ -15,7 +15,7 @@ class ContactBook:
             print("No contacts found.")
         else:
             for name, details in self.contacts.items():
-                print(f"Name: {name}, Phone: {details['phone']}")
+                print(f"Name: {name}, Phone: {details['phone']}, Address: {details['address']} , Email: {details['email']}")
 
     def search_contact(self, search_term):
         results = {name: details for name, details in self.contacts.items() if search_term in name or search_term in details['phone']}
